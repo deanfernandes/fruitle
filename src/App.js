@@ -51,6 +51,10 @@ function App() {
           break;
         }
         default: {
+          if (event.key.toUpperCase().match(/^[A-Z]$/) === null) {
+            return;
+          }
+
           if (currentGuess.length === WORD_LEN) {
             return;
           }
